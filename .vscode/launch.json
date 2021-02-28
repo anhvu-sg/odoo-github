@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Odoo13-pg12-debug",
+            "request": "launch",
+            "type": "python",
+            "program": "${workspaceRoot}/odoo/odoo-bin",
+            "args": [
+                "-c", "${workspaceRoot}/config/dev.conf",
+                "--addons-path", "${workspaceRoot}/odoo/odoo/addons, ${workspaceRoot}/odoo/addons",
+                "--load", "web",
+                // Use this to exit the external terminal
+                "&&", "exit",
+            ],
+            "cwd": "${workspaceRoot}/bin",
+        }
+    ]
+}
